@@ -16,6 +16,8 @@ punkt o zadaną wielkość, oraz abstrakcyjną metodą public Point getCenter().
 Utwórz zdefiniowane klasy podrzędne: Circle, Rectangle, Line z konstruktorami:
 public Circle(Point center, double radius), public Rectangle(Point topLeft,
 double width, double height) oraz public Line(Point from, Point to).
+Excercise2
+Zdefiniuj metody clone dla klas z poprzedniego ćwiczenia.
 */
 package Excercise1;
 

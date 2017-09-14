@@ -11,9 +11,13 @@ public class Rectangle extends Shape {
         this.width = width;
         this.height = height;
     }
-
     @Override
     public Point getCenter() {
         return new Point((topLeft.getX()+width)/2,(topLeft.getY()+height)/2);
+    }
+
+    @Override
+    protected Rectangle clone() throws CloneNotSupportedException {
+        return (Rectangle) super.clone();
     }
 }

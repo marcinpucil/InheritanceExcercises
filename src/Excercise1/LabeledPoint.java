@@ -29,9 +29,13 @@ public class LabeledPoint extends Point {
         LabeledPoint that = (LabeledPoint) o;
         return Objects.equals(getLabel(), that.getLabel());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), getLabel());
+    }
+
+    @Override
+    protected LabeledPoint clone() throws CloneNotSupportedException {
+        return (LabeledPoint) super.clone();
     }
 }

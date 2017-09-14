@@ -48,4 +48,9 @@ public class Point {
     public int hashCode() {
         return Objects.hash(getX(), getY());
     }
+
+    @Override
+    protected Point clone() throws CloneNotSupportedException {
+        return (Point) super.clone();
+    }
 }

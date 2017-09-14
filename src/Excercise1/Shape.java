@@ -13,4 +13,9 @@ public abstract class Shape {
         point1.setY(point1.getY() + dy);
     }
     public abstract Point getCenter();
+
+    @Override
+    protected Shape clone() throws CloneNotSupportedException {
+        return (Shape) super.clone();
+    }
 }

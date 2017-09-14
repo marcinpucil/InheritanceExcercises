@@ -14,4 +14,9 @@ public class Line extends Shape {
     public Point getCenter() {
         return new Point((to.getX()-from.getX())/2,(to.getY()-from.getY()/2));
     }
+
+    @Override
+    protected Line clone() throws CloneNotSupportedException {
+        return (Line) super.clone();
+    }
 }
