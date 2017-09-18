@@ -35,6 +35,7 @@ public class LabeledPoint extends Point {
     }
 
 
+
     @Override
     protected LabeledPoint clone() throws CloneNotSupportedException {
         return (LabeledPoint) super.clone();
