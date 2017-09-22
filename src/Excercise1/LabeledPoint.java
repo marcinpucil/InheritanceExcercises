@@ -34,8 +34,6 @@ public class LabeledPoint extends Point {
         return Objects.hash(super.hashCode(), getLabel());
     }
 
-
-
     @Override
     protected LabeledPoint clone() throws CloneNotSupportedException {
         return (LabeledPoint) super.clone();
