@@ -10,16 +10,21 @@ wewnętrznej i typu prostego?
 public class Main {
 
     public static void main(String[] args) {
-        int[] tableForClassTest = {1, 2, 3};
-
+        int[] tableForClassTest = {0, 1, 2, 3};
+        int primitiveForClassTest = 0;
+        Integer integerForTest = 0;
         Colours colours;
         colours = Colours.getBlue();
         System.out.println(colours);
         //second part
-        secondPart(tableForClassTest);
+
+        classTests(tableForClassTest);
+        classTests(primitiveForClassTest);
+        classTests(integerForTest);
+        classTests(new InnerClassForTest());
     }
 
-    private static void secondPart(Object objectForTest) {
+    private static void classTests(Object objectForTest) {
         Class<?> aClass = objectForTest.getClass();
         System.out.println(aClass.getCanonicalName());
         System.out.println(aClass.getName());
@@ -27,6 +32,10 @@ public class Main {
         System.out.println(aClass.getTypeName());
         System.out.println(aClass.toGenericString());
         System.out.println(aClass.toString());
+        System.out.println("");
+    }
+
+    private static class InnerClassForTest {
     }
 
 
