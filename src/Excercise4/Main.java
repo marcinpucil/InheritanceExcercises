@@ -9,7 +9,7 @@ wewnętrznej i typu prostego?
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException {
         int[] tableForClassTest = {0, 1, 2, 3};
         int primitiveForClassTest = 0;
         Integer integerForTest = 0;
@@ -17,14 +17,17 @@ public class Main {
         colours = Colours.getBlue();
         System.out.println(colours);
         //second part
-
+        System.out.println("Table");
         classTests(tableForClassTest);
+        System.out.println("Primitive");
         classTests(primitiveForClassTest);
+        System.out.println("Integer");
         classTests(integerForTest);
+        System.out.println("InnerClass");
         classTests(new InnerClassForTest());
     }
 
-    private static void classTests(Object objectForTest) {
+    private static void classTests(Object objectForTest) throws NoSuchMethodException {
         Class<?> aClass = objectForTest.getClass();
         System.out.println(aClass.getCanonicalName());
         System.out.println(aClass.getName());
@@ -34,6 +37,7 @@ public class Main {
         System.out.println(aClass.toString());
         System.out.println("");
     }
+
 
     private static class InnerClassForTest {
     }
