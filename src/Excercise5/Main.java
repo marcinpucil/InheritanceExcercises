@@ -15,7 +15,6 @@ public class Main {
         Main main = new Main();
         System.out.println(uniwersalToStringMethod(main));
     }
-
     private static java.lang.String uniwersalToStringMethod(Object o) throws IllegalAccessException {
         StringBuilder stringBuilder = new StringBuilder();
         Class<?> aClass = o.getClass();
